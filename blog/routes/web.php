@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\CategoryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,6 +28,18 @@ route::post('/profile/photo/upload', [ProfileController::class, 'profile_photo_u
 route::post('/password/change', [ProfileController::class, 'password_change']);
 route::post('/name/change', [ProfileController::class, 'name_change']);
 route::post('/email/change', [ProfileController::class, 'email_change']);
+
+// users
+
+route::get('/users', [UserController::class, 'users']);
+route::get('/user/delete/{user_id}', [UserController::class, 'user_delete'])->name('user.delete');
+
+
+
+// category
+
+route::get('/category', [CategoryController::class, 'category'])->name('category');
+route::post('/category/store', [CategoryController::class, 'category_store'])->name('category.store');
 
 
 

@@ -3,9 +3,16 @@
 
 @section('content')
 <br>
+<nav class="page-breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ route('home') }}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Profile</li>
+    </ol>
+</nav>
+<br>
 <div class="row">
     <div class="col-lg-6">
-        <h2>Welcome  {{ auth()->user()->name }}</h2>
+        <h2>Name:{{ auth()->user()->name }}</h2>
         <h4>Email:{{ auth()->user()->email }}</h4>
 
     </div>
