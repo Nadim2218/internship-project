@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\TagController;
 
 /*
 |--------------------------------------------------------------------------
@@ -40,8 +41,17 @@ route::get('/user/delete/{user_id}', [UserController::class, 'user_delete'])->na
 
 route::get('/category', [CategoryController::class, 'category'])->name('category');
 route::post('/category/store', [CategoryController::class, 'category_store'])->name('category.store');
+route::get('/category/delete/{category_id}', [CategoryController::class, 'category_delete'])->name('category.delete');
+route::get('/category/edit/{category_id}', [CategoryController::class, 'category_edit'])->name('category.edit');
+route::post('/category/update', [CategoryController::class, 'category_update'])->name('category.update');
 
 
+
+
+// tag
+route::get('/tags', [TagController::class, 'tag'])->name('tag');
+route::post('/tags/store', [TagController::class, 'tag_store'])->name('tag.store');
+route::get('/tag/delete/{tag_id}', [TagController::class, 'tag_delete'])->name('tag.delete');
 
 
 

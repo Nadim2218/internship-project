@@ -7,12 +7,12 @@
     <title>Document</title>
     <link rel="shortcut icon" href="{{ asset('dashboard_assets') }}/images/favicon.ico">
 
-    <link href="dashboard_assets/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('dashboard_assets') }}/libs/morris.js/morris.css" rel="stylesheet" type="text/css" />
 
     <!-- App css -->
-    <link href="dashboard_assets/css/style.min.css" rel="stylesheet" type="text/css">
-    <link href="dashboard_assets/css/icons.min.css" rel="stylesheet" type="text/css">
-    <script src="dashboard_assets/js/config.js"></script>
+    <link href="{{ asset('dashboard_assets') }}/css/style.min.css" rel="stylesheet" type="text/css">
+    <link href="{{ asset('dashboard_assets') }}/css/icons.min.css" rel="stylesheet" type="text/css">
+    <script src="{{ asset('dashboard_assets') }}/js/config.js"></script>
 </head>
 <body>
 
@@ -80,7 +80,26 @@
                                 </li>
                                 <li class="menu-item">
                                     <a class='menu-link' href='ui-buttons.html'>
-                                        <span class="menu-text">View Categories</span>
+                                        <span class="menu-text">Edit Categories</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#tag" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                            <span class="menu-icon"><i class="bx bx-cookie"></i></span>
+                            <span class="menu-text"> Tags </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="tag">
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('tag') }}'>
+                                        <span class="menu-text">Add Tags</span>
                                     </a>
                                 </li>
 
@@ -410,21 +429,24 @@
     <!-- END wrapper -->
 
     <!-- App js -->
-    <script src="dashboard_assets/js/vendor.min.js"></script>
-    <script src="dashboard_assets/js/app.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/js/vendor.min.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/js/app.js"></script>
 
     <!-- Knob charts js -->
-    <script src="dashboard_assets/libs/jquery-knob/jquery.knob.min.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/libs/jquery-knob/jquery.knob.min.js"></script>
 
     <!-- Sparkline Js-->
-    <script src="dashboard_assets/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/libs/jquery-sparkline/jquery.sparkline.min.js"></script>
 
-    <script src="dashboard_assets/libs/morris.js/morris.min.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/libs/morris.js/morris.min.js"></script>
 
-    <script src="dashboard_assets/libs/raphael/raphael.min.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/libs/raphael/raphael.min.js"></script>
 
     <!-- Dashboard init-->
-    <script src="dashboard_assets/js/pages/dashboard.js"></script>
+    <script src="{{ asset('dashboard_assets') }}/js/pages/dashboard.js"></script>
+
+
+
 
 </body>
 
