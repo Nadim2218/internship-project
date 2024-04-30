@@ -84,7 +84,7 @@
     <!-- App js -->
     <script src="dashboard_assets/js/vendor.min.js"></script>
     <script src="dashboard_assets/js/app.js"></script>
-
+    {!! NoCaptcha::renderJs() !!}
 </body>
 
 

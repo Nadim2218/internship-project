@@ -108,6 +108,49 @@
                         </div>
                     </li>
 
+                    <li class="menu-item">
+                        <a href="#role" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                            <span class="menu-icon"><i class="bx bx-cookie"></i></span>
+                            <span class="menu-text"> Role Manager </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="role">
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('role') }}'>
+                                        <span class="menu-text">Role</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
+                    <li class="menu-item">
+                        <a href="#post" data-bs-toggle="collapse" class="menu-link waves-effect waves-light">
+                            <span class="menu-icon"><i class="bx bx-cookie"></i></span>
+                            <span class="menu-text"> Post </span>
+                            <span class="menu-arrow"></span>
+                        </a>
+                        <div class="collapse" id="post">
+                            <ul class="sub-menu">
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('add.post') }}'>
+                                        <span class="menu-text">Add New Post</span>
+                                    </a>
+                                </li>
+                                <li class="menu-item">
+                                    <a class='menu-link' href='{{ route('my.post') }}'>
+                                        <span class="menu-text">My Post</span>
+                                    </a>
+                                </li>
+
+
+                            </ul>
+                        </div>
+                    </li>
+
 
                 </ul>
             </div>

@@ -60,6 +60,9 @@
                                     <label class="form-check-label ms-2" for="checkbox-signin">I accept <a href="#">Terms and Conditions</a></label>
                                 </div>
                             </div>
+                            <div class="mb-3">
+                                {!! NoCaptcha::display() !!}
+                            </div>
 
                             <div class="form-group mb-0 text-center">
                                 <button class="btn btn-primary w-100" type="submit"> Sign Up </button>
@@ -85,6 +88,7 @@
     <!-- App js -->
     <script src="dashboard_assets/js/vendor.min.js"></script>
     <script src="dashboard_assets/js/app.js"></script>
+    {!! NoCaptcha::renderJs() !!}
 
 </body>
 

@@ -12,6 +12,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 m-auto">
+            @can('show_user_list')
             <div class="card">
                 <div class="card-header">
                     @if(session('userdelete'))
@@ -37,9 +38,12 @@
                             <td>{{ $sl+1 }}</td>
                             <td> {{ $user->name }}</td>
                             <td>{{ $user->email }}</td>
+                            @can('user_delete')
                             <td>
                                 <a href="{{ route('user.delete', $user->id) }}" class="btn btn-danger">Delete</a>
                             </td>
+                            @endcan
+
 
                         </tr>
 
@@ -48,6 +52,8 @@
                     </table>
                 </div>
             </div>
+            @endcan
+
         </div>
     </div>
 </div>
